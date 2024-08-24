@@ -1,0 +1,38 @@
+.on-mouse{
+  
+    cursor: pointer;
+
+    & h2 {
+
+        letter-spacing: none;
+        transition: all 1s;
+    }
+
+    & h2, 
+    & h3 {
+      
+        color: rgba(121, 64, 214, 0.856);
+        transition: all 0.5s;
+
+    }
+}
+
+.on-mouse:hover {
+
+    cursor: pointer;
+
+    & h2{
+
+        letter-spacing: 2px;
+        transition: all 1s;
+    }
+
+
+    & h2, 
+    & h3 {
+      
+        color: rgba(216, 73, 109, 0.856);
+        transition: all 0.5s;
+
+    }
+}
