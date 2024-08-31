@@ -23,6 +23,7 @@ export class HomePage {
     this.isloading = true;
     // feth ele busca url chamada
       fetch('https://restcountries.com/v3.1/all?fields=name,ccn3,flags')
+
       .then( dados => dados.json())
       // converto em json
       .then(dados => {
@@ -44,8 +45,7 @@ export class HomePage {
    verDetalhes(ccn3:string){
     
     this.router.navigate(['/detalhe-pais'], {
-      state:{codigo:ccn3,
-      }
+      state:{codigo:ccn3 }
     });
    }
 }
