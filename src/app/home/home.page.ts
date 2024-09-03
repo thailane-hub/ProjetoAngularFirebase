@@ -48,4 +48,8 @@ export class HomePage {
       state:{codigo:ccn3 }
     });
    }
+ 
+    
+
+
 }

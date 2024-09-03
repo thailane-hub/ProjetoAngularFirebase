@@ -1,33 +1,50 @@
 <ion-content [fullscreen]="true">
-    
-  <ion-row class="ion-justify-content-center">
+  <ion-card class="container">
+    <ion-row class="ion-justify-content-center">
       <ng-container *ngFor="let pais of this.paises">
-          <ion-col size="12" size-lg="4">
-              <ion-item lines="none">
-                  <ion-thumbnail slot="start">
-                      <img src="{{ pais.flags.png }}">
-                  </ion-thumbnail>
-
-                  <ion-label>
-                      <h2>{{ pais.name.common }}</h2>
-                      <h3>{{ pais.name.official }}</h3>
-                  </ion-label>
-              </ion-item>
+        <ion-col size="12" size-lg="8" >
+          <ion-item lines="none">
+            <ion-thumbnail slot="start" >
+              <img src="{{ pais.flags.png }}">
+            </ion-thumbnail>
+            
+            <ion-label>
+              <h2>{{ pais.name.common }}</h2>
+              <h3 class="pais">{{ pais.name.official }}</h3>
+            </ion-label>
+          </ion-item>
+          <ion-row >
+            <ion-col>
+              <h3>Capital: {{pais.capital}}</h3>
+              <h3>População: {{pais.population}}</h3>
+              <h3>Área: {{pais.area}}</h3>
+              <h3>Região: {{pais.region}}</h3>
+              <h3>Sub-Região: {{pais.subregion}}</h3>
+              <ng-container *ngFor="let time of pais.timezones">
+                <h3>{{time}}</h3>
+                <h3 *ngIf="pais.independent">{{pais.name.common}}: é Idependente</h3>
+                <h3 *ngIf="!pais.independent">{{pais.name.common}}: Não é Idependente</h3>
+                
+              </ng-container>
+              <h3>veja mais sobre paises que fazem fronteira:</h3>
               <ion-row>
-                <ion-col>
-                  <h3>Capital: {{pais.capital}}</h3>
-                  <h3>População: {{pais.population}}</h3>
-                  <h3>Área: {{pais.area}}</h3>
-                  <h3>Região: {{pais.region}}</h3>
-                  <h3>Sub-Região: {{pais.subregion}}</h3>
-                  <ng-container *ngFor="let time of pais.timezones">
-                    <h3>{{time}}</h3>
-                  </ng-container>
-                  <h3>{{pais.status}}</h3>
-                </ion-col>
+                <ng-container *ngIf="!pais.borders">
+                  <h3>Este país Não tem fronteira</h3>
+
+                </ng-container>
+
+                <ng-container *ngFor="let fronteira of pais.borders">
+                  <ion-col size="4">
+                    <h3>{{fronteira}}</h3>
+                  </ion-col>
+                </ng-container>
               </ion-row>
-          </ion-col>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        
       </ng-container>
-  </ion-row>
-  
-</ion-content>
+      
+    </ion-row>
+  </ion-card>
+  </ion-content>

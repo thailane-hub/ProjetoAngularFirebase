@@ -7,16 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetalhePaisPage implements OnInit {
   codigo:any;
-  pais:any;
+  paises:any;
 
   constructor() { }
 
   ngOnInit() {
     this.codigo = history.state.codigo;
-    fetch(`https://restcountries.com/v3.1/alpha/{this.codigo}`)
+    fetch(`https://restcountries.com/v3.1/alpha/${this.codigo}`)
     .then( dados => dados.json())
     .then(dados => {
-      this.pais = dados
+      this.paises = dados;
+      console.log(dados)
     })
     .catch(erro => {console.log(erro);})
     .finally(() => {console.log('finalizado!')})
