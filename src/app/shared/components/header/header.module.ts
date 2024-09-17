@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header.component';
 import { IonicModule } from '@ionic/angular';
+import { FooterModule } from '../footer/footer/footer.module';
+import { GaleriaPageModule } from 'src/app/galeria/galeria.module';
 
 
 
@@ -11,7 +13,9 @@ import { IonicModule } from '@ionic/angular';
   ],
   imports: [
     CommonModule,
-    IonicModule
+    IonicModule,
+    FooterModule,
+    GaleriaPageModule
   ],
   exports:[
     HeaderComponent

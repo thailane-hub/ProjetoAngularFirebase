@@ -6,6 +6,13 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { HeaderModule } from '../shared/components/header/header.module';
+import { FooterModule } from '../shared/components/footer/footer/footer.module';
+import { GaleriaPageModule } from '../galeria/galeria.module';
+import { HeaderComponent } from '../shared/components/header/header.component';
+import { FooterComponent } from '../shared/components/footer/footer/footer.component';
+import { GaleriaPage } from '../galeria/galeria.page';
+import { GaleryModule } from '../shared/components/galery/galery.module';
+import { BannerModule } from '../shared/components/banner/banner.module';
 
 
 @NgModule({
@@ -14,8 +21,19 @@ import { HeaderModule } from '../shared/components/header/header.module';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    HeaderModule
+    HeaderModule,
+    FooterModule,
+    GaleriaPageModule,
+    GaleryModule,
+    BannerModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
+
+  exports:[
+    HeaderComponent,
+    FooterComponent,
+    GaleriaPage
+  ]
+
 })
 export class HomePageModule {}

@@ -1,0 +1,13 @@
+
+<ion-footer>
+  <ion-toolbar  >
+    <ng-container *ngFor="let item of this.rodape.itens">
+      <ion-item slot="start" lines="none" class="ion-justify-content-center">
+        <ion-thumbnail>
+          <img src="{{item.icone}}" alt="" srcset="">
+        </ion-thumbnail>
+      </ion-item>
+    </ng-container>
+    
+  </ion-toolbar>
+</ion-footer>

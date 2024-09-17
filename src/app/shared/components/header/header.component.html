@@ -1,20 +1,24 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-item slot="start">
-      <ion-thumbnail >
-        <img src="{{this.menu.logo}}" alt="" srcset="">
-      </ion-thumbnail>
-    </ion-item>
-    <ng-container *ngFor="let item of this.menu.itens">
-      <ion-item slot="start" lines="none">
-        <ion-thumbnail slot="start" class="icone">
-          <img src="{{item.icone}}" >
-        </ion-thumbnail>
-        <ion-label>{{item.texto}}</ion-label>
-      </ion-item>
-
-    </ng-container>
+<ion-header  >
+  <!-- <ion-row class="justify-content-center">
+    <ion-col size="6" class="ion-text-center"> -->
+      <ion-toolbar color="primary">
+        <ion-item slot="start"  color="primary">
+          <ion-thumbnail >
+            <img src="{{this.menu.logo}}" alt="" srcset="">
+          </ion-thumbnail>
+        </ion-item >
+        <ng-container *ngFor="let item of this.menu.itens">
+          <ion-item slot="start" lines="none" class="ion-text-center" color="primary" >
+            <ion-thumbnail slot="start" class="icone">
+              <img src="{{item.icone}}" >
+            </ion-thumbnail>
+            <ion-label>{{item.texto}}</ion-label>
+          </ion-item>
     
-    
-  </ion-toolbar>
+        </ng-container>
+        
+        
+      </ion-toolbar>
+    <!-- </ion-col>
+  </ion-row> -->
 </ion-header>

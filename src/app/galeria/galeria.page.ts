@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
+import { register } from 'swiper/element/bundle';
+
 
 @Component({
   selector: 'app-galeria',
   templateUrl: './galeria.page.html',
   styleUrls: ['./galeria.page.scss'],
 })
-export class GaleriaPage implements OnInit {
+export class GaleriaPage {
+
+ 
+  
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }
