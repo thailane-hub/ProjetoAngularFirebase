@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent{
   menu ={
-    logo:'https://cdn.icon-icons.com/icons2/1715/PNG/512/2730380-animal-character-filthy-fox-inkcontober_112681.png',
+    logo:'https://cdn-icons-png.flaticon.com/128/17799/17799664.png',
     itens:[
       { icone:'https://cdn3.iconfinder.com/data/icons/sympletts-free-sampler/128/home-256.png',texto: 'inicio'  },
       { icone:'https://cdn1.iconfinder.com/data/icons/ui-set-6/100/Info-256.png',texto: 'sobre'  },
