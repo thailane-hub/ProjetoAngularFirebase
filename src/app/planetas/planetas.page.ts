@@ -16,10 +16,11 @@ export class PlanetasPage implements OnInit {
     distancia_sol: null,
     foto: null
   }
+  planetas:any = [];
 
   constructor(
     public crudService: CrudService
-  ) { }
+  ) { this.getPlanetas() }
 
   ngOnInit() {
   }
@@ -27,6 +28,14 @@ export class PlanetasPage implements OnInit {
   salvar() {
     console.log(this.planeta);
     this.crudService.insert(this.planeta, 'planetas');
+  }
+
+  getPlanetas(){
+    this.crudService.fetchAll('planetas')
+    .then(resp => {
+      console.log(resp);
+      this.planetas = resp;
+    })
   }
 
 }

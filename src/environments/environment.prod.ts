@@ -1,12 +1,12 @@
 export const environment = {
   firebaseConfig: {
-    apiKey: "AIzaSyDyfbu6T-gWGMdnS2EJkQ34Ae7c1FNiWdE",
-    authDomain: "aula-35ec4.firebaseapp.com",
-    projectId: "aula-35ec4",
-    storageBucket: "aula-35ec4.appspot.com",
-    messagingSenderId: "874119806138",
-    appId: "1:874119806138:web:d1142d445f1a3b784f9683",
-    measurementId: "G-9CKBYNR6RF"
+    apiKey: "AIzaSyD-hFYUwBmf5-bZ9AxOFhAfTRQ5d6Duc98",
+    authDomain: "sistema-solar-60fe9.firebaseapp.com",
+    projectId: "sistema-solar-60fe9",
+    storageBucket: "sistema-solar-60fe9.firebasestorage.app",
+    messagingSenderId: "935653950201",
+    appId: "1:935653950201:web:82daa7d3e3b3509c7cd828",
+    measurementId: "G-5205835MH0"
   },
   production: true
 };
